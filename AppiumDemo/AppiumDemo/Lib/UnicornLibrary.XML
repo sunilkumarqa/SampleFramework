@@ -1,0 +1,4044 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnicornLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:UnicornLibrary.Appium.AppiumModels.AppiumSetup">
+            <summary>
+            static class for Appium configurations
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Appium.AppiumModels.AppiumSetup.driver">
+            <summary>
+             Appium Driver exposed for test application
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Appium.BaseClasses.TestScenarioBaseClass">
+            <summary>
+            Appium test scenario base class
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Appium.BaseClasses.TestScenarioBaseClass.Execute(System.Int64,System.Int64,System.String)">
+            <summary>
+            Abstract method to implement test case execution code
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+            <param name="testCaseName"></param>
+        </member>
+        <member name="M:UnicornLibrary.Appium.BaseClasses.TestScenarioBaseClass.Validate(System.Int64,System.Int64,System.String)">
+            <summary>
+            Abstract method to implement test case validation code
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+            <param name="testCaseName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Appium.BaseClasses.TestScenarioBaseClass.ProcessValidate(System.Int64,System.Int64,System.String)">
+            <summary>
+            Method to execute test case validation code
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+            <param name="testCaseName"></param>
+        </member>
+        <member name="M:UnicornLibrary.Appium.BaseClasses.TestScenarioBaseClass.EndTestCaseExecution(System.Int64,System.Int64,System.String)">
+            <summary>
+            Method to execute code after test case execution
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+            <param name="testCaseName"></param>
+        </member>
+        <member name="T:UnicornLibrary.Appium.Services.BugService">
+            <summary>
+            Appium BugService to provice bug management functionalities
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IBugService">
+            <summary>
+            BugService Interface to provice bug management functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IBugService.CreateBug(System.String,System.String,System.Int64,System.Int64,System.String,System.Byte[],System.Int32)">
+            <summary>
+            Method to create a bug
+            </summary>
+            <param name="projectName"></param>
+            <param name="testCycle"></param>
+            <param name="testScenarioId"></param>
+            <param name="testDataId"></param>
+            <param name="description"></param>
+            <param name="ScreenshotBytes"></param>
+            <param name="bugSequence"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IBugService.ResolveBug(System.String,System.String,System.Int64,System.Int64,System.Int32)">
+            <summary>
+            Method to resolve a bug
+            </summary>
+            <param name="projectName"></param>
+            <param name="testCycle"></param>
+            <param name="testScenarioId"></param>
+            <param name="testDataId"></param>
+            <param name="bugSequence"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IBugService.GetScreenshot">
+            <summary>
+            Method to capture screenshot
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.BugService.CreateBug(System.String,System.String,System.Int64,System.Int64,System.String,System.Byte[],System.Int32)">
+            <summary>
+            Appium Method to create a bug
+            </summary>
+            <param name="projectName"></param>
+            <param name="testCycle"></param>
+            <param name="testScenarioId"></param>
+            <param name="testDataId"></param>
+            <param name="description"></param>
+            <param name="ScreenshotBytes"></param>
+            <param name="bugSequence"></param>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.BugService.ResolveBug(System.String,System.String,System.Int64,System.Int64,System.Int32)">
+            <summary>
+            Appium Method to resolve a bug
+            </summary>
+            <param name="projectName"></param>
+            <param name="testCycle"></param>
+            <param name="testScenarioId"></param>
+            <param name="testDataId"></param>
+            <param name="bugSequence"></param>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.BugService.GetScreenshot">
+            <summary>
+            Appium Method to capture screenshot
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Appium.Services.ElementServices.AppiumButtonService">
+            <summary>
+            ButtonService to provide button functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IAppiumServices.IAppiumButtonService">
+            <summary>
+            Appium button service interface
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IButtonService`1">
+            <summary>
+            ButtonService interface to provide button functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IButtonService`1.Click(`0)">
+            <summary>
+            Method for button click
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IButtonService`1.Text(`0)">
+            <summary>
+            Method to get text of the button
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IButtonService`1.IsEnabled(`0)">
+            <summary>
+            Method to get is enabled property of the button
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IButtonService`1.IsVisible(`0)">
+            <summary>
+            Method to get is visible property of the button
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IButtonService`1.DoubleClick(`0)">
+            <summary>
+            method to double click the button
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.ElementServices.AppiumButtonService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Appium button service Constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.ElementServices.AppiumButtonService.Click(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method for Appium button click
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.ElementServices.AppiumButtonService.DoubleClick(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method for Appium button DoubleClick
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.ElementServices.AppiumButtonService.Text(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get text of the Appium button
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.ElementServices.AppiumButtonService.IsEnabled(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is enabled property of the Appium button
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.ElementServices.AppiumButtonService.IsVisible(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is visible property of the Appium button
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IAppiumServices.IAppiumTextBoxService">
+            <summary>
+            Appium textbox service interface
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.ITextBoxService`1">
+            <summary>
+            TextBoxService interface to provide textbox functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ITextBoxService`1.EnterText(`0,System.String)">
+            <summary>
+            Method to enter text into textbox
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ITextBoxService`1.ClearText(`0)">
+            <summary>
+            Method to clear textbox text
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ITextBoxService`1.Text(`0)">
+            <summary>
+            Method to get text of the textbox
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ITextBoxService`1.IsEnabled(`0)">
+            <summary>
+            Method to get is enabled property of textbox
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ITextBoxService`1.IsVisible(`0)">
+            <summary>
+            Method to get is visible property of textbox
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.ElementServices.AppiumTextBoxService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Appium Textbox constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.ElementServices.AppiumTextBoxService.EnterText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to enter text into Appium textbox
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.ElementServices.AppiumTextBoxService.ClearText(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to clear Appium textbox text
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.ElementServices.AppiumTextBoxService.Text(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get text of the Appium textbox
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.ElementServices.AppiumTextBoxService.IsEnabled(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is enabled property of Appium textbox
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Appium.Services.ElementServices.CommonService">
+            <summary>
+            Class to have Appium elements common functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Appium.Services.ElementServices.CommonService.SearchElement(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Method to search Appium element 
+            </summary>
+            <param name="_window"></param>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.BaseClasses.TestScenarioBaseClass">
+            <summary>
+            Selenium test scenario base class to implement test scenario
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.BaseClasses.TestScenarioBaseClass.IntializeFirefox">
+            <summary>
+            Method to return Firefox browser driver
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.BaseClasses.TestScenarioBaseClass.IntializeChrome">
+            <summary>
+            Method to return Chrome browser driver
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.BaseClasses.TestScenarioBaseClass.IntializeIE">
+            <summary>
+            Method to return IE browser driver
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.BaseClasses.TestScenarioBaseClass.CloseBrowser(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to close all browsers used in Selenium test case execution
+            </summary>
+            <param name="browserDriver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.BaseClasses.TestScenarioBaseClass.Execute(System.Int64,System.Int64,System.String)">
+            <summary>
+            Abstract method to implement Selenium test case execution code
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+            <param name="testCaseName"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.BaseClasses.TestScenarioBaseClass.Validate(System.Int64,System.Int64,System.String)">
+            <summary>
+            Abstract method to implement Selenium test case validation code
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+            <param name="testCaseName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.BaseClasses.TestScenarioBaseClass.ProcessValidate(System.Int64,System.Int64,System.String)">
+            <summary>
+            Method to execute Selenium test case validation code
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+            <param name="testCaseName"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.BaseClasses.TestScenarioBaseClass.EndTestCaseExecution(System.Int64,System.Int64,System.String)">
+            <summary>
+            Method to execute code after Selenium test case execution
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+            <param name="testCaseName"></param>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.BaseClasses.URLClass">
+            <summary>
+            Class for method extension for Selenium web driver
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.BaseClasses.URLClass.GoToURL(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method for Selenium browser to navigate to particular URL
+            </summary>
+            <param name="driver"></param>
+            <param name="Url"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.BaseClasses.URLClass.GoToURL(OpenQA.Selenium.IWebDriver,System.String,System.Int64)">
+            <summary>
+            Method for Selenium browser to navigate to particular URL and wait for it to complete load
+            </summary>
+            <param name="driver"></param>
+            <param name="Url"></param>
+            <param name="waitSeconds"></param>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.EventHandler">
+            <summary>
+            Class to maintain unicorn Selenium event handlers
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.BugService">
+            <summary>
+            Selenium BugService to provice bug management functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.BugService.CreateBug(System.String,System.String,System.Int64,System.Int64,System.String,System.Byte[],System.Int32)">
+            <summary>
+            Selenium Method to create a bug
+            </summary>
+            <param name="projectName"></param>
+            <param name="testCycle"></param>
+            <param name="testScenarioId"></param>
+            <param name="testDataId"></param>
+            <param name="description"></param>
+            <param name="ScreenshotBytes"></param>
+            <param name="bugSequence"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.BugService.ResolveBug(System.String,System.String,System.Int64,System.Int64,System.Int32)">
+            <summary>
+            Selenium Method to resolve a bug
+            </summary>
+            <param name="projectName"></param>
+            <param name="testCycle"></param>
+            <param name="testScenarioId"></param>
+            <param name="testDataId"></param>
+            <param name="bugSequence"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.BugService.GetScreenshot">
+            <summary>
+            Selenium Method to capture screenshot
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDrumDateTimePickerService">
+            <summary>
+            Bootstrap Drum Date Picker Service primarily but not restricted to Table View ReSkin
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IDatePickerService">
+            <summary>
+            DatePickerService interface to provide date picker functionalities
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDrumDateTimePickerService.WebElement">
+            <summary>
+            Selenium date picker webelement       
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDrumDateTimePickerService.DataEntity">
+            <summary>
+            Selenium date picker webelement       
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDrumDateTimePickerService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Bootstrap Drum Date Picker Service constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService">
+            <summary>
+            Bootstrap DropdownService to provide dropdown functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumDropDownService">
+            <summary>
+            DropdownService interface to provide dropdown functionalities for webapplications
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IDropdownService`1">
+            <summary>
+            DropdownService interface to provide dropdown functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IDropdownService`1.SelectByIndex(`0,System.Int32)">
+            <summary>
+            method to select dropdown value by index
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IDropdownService`1.SelectByText(`0,System.String)">
+            <summary>
+            method to select dropdown value by text
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IDropdownService`1.SelectByValue(`0,System.String)">
+            <summary>
+            method to select dropdown value by value
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IDropdownService`1.getOptions(`0)">
+            <summary>
+            method to get all the options in dropdown
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Unicorn.IServices.IElementServices.IDropdownService`1.getSelected(`0)" -->
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Unicorn.IServices.IElementServices.IDropdownService`1.getCount(`0)" -->
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumDropDownService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)" -->
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumDropDownService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get button attribute value
+            </summary>
+            <param name="_driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumDropDownService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of the button
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumDropDownService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the button
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumDropDownService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the button
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumDropDownService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService.WebElement">
+            <summary>
+            Selenium dropdown webelement
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel,UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Bootstrap dropdown service constructor
+            </summary>
+            <param name="_arrowelement"></param>
+            <param name="_contentelement"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService.SelectByIndex(OpenQA.Selenium.IWebDriver,System.Int32)">
+            <summary>
+            method to select dropdown value by index
+            </summary>
+            <param name="driver"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService.SelectByText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to select dropdown value by text
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to get the attribute of the dropdown
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService.SelectByValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to select dropdown value by value
+            </summary>
+            <param name="driver"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService.getOptions(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get all the options in dropdown
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService.getSelected(OpenQA.Selenium.IWebDriver)" -->
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService.getCount(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the number of options in dropdown
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get list box css value
+            </summary>
+            <param name="driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService">
+            <summary>
+            Bootstrap DropdownSearchService to provide dropdown functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService.WebElement">
+            <summary>
+            Selenium dropdown webelement
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel,UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Bootstrap dropdown service constructor
+            </summary>
+            <param name="_arrowelement"></param>
+            <param name="_contentelement"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService.SelectByIndex(OpenQA.Selenium.IWebDriver,System.Int32)">
+            <summary>
+            method to select dropdown value by index
+            </summary>
+            <param name="driver"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService.SelectByText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to select dropdown value by text
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService.SelectByValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to select dropdown value by value
+            </summary>
+            <param name="driver"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService.getOptions(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get all the options in dropdown
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService.getSelected(OpenQA.Selenium.IWebDriver)" -->
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService.getCount(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the number of options in dropdown
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get list box css value
+            </summary>
+            <param name="driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get dropdown attribute value
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService">
+            <summary>
+            Bootstrap DropdownSearchService to provide dropdown functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService.WebElement">
+            <summary>
+            Selenium dropdown webelement
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel,UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Bootstrap dropdown service constructor
+            </summary>
+            <param name="_arrowelement"></param>
+            <param name="_contentelement"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService.SelectByIndex(OpenQA.Selenium.IWebDriver,System.Int32)">
+            <summary>
+            method to select dropdown value by index
+            </summary>
+            <param name="driver"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService.SelectByText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to select dropdown value by text
+            </summary>
+            <param name="driver"></param>
+            <param name="text">Takes comma separated multiple item</param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService.SelectByValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to select dropdown value by value
+            </summary>
+            <param name="driver"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService.getOptions(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get all the options in dropdown
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService.getSelected(OpenQA.Selenium.IWebDriver)" -->
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService.getCount(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the number of options in dropdown
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get list box css value
+            </summary>
+            <param name="driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get dropdown attribute value
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.BootStrapDropdownSearchCheckboxService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.ButtonService">
+            <summary>
+            Selenium ButtonService to provide button functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumButtonService">
+            <summary>
+            ButtonService interface to provide button functionalities for web applications
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumButtonService.Submit(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method for button submit
+            </summary>
+            <param name="_driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumButtonService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get button css value
+            </summary>
+            <param name="_driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumButtonService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get button attribute value
+            </summary>
+            <param name="_driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumButtonService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of the button
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumButtonService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the button
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumButtonService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the button
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumButtonService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.WebElement">
+            <summary>
+            Selenium Button web element
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Selenium  Button service constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.Click(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method for Selenium button click
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.Submit(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method for Selenium button submit
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get Selenium button css value
+            </summary>
+            <param name="driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get Selenium button attribute value
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.Text(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get text of the Selenium button
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.IsEnabled(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is enabled property of the Selenium button
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of the Selenium button
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.IsVisible(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is visible property of the Selenium button
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the Selenium button
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the Selenium button
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.IsSelected(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is selected property of the Selenium button
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ButtonService.DoubleClick(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to DoubleClick the Selenium button
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService">
+            <summary>
+            Selenium CheckBoxService to provide checkbox functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumCheckBoxService">
+            <summary>
+            CheckBoxService interface to provide checkbox functionalities for web applications
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.ICheckBoxService`1">
+            <summary>
+            CheckBoxService interface to provide checkbox functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ICheckBoxService`1.Check(`0)">
+            <summary>
+            Method to select the checkBox
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ICheckBoxService`1.Uncheck(`0)">
+            <summary>
+            Method to de-select the checkBox
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ICheckBoxService`1.Text(`0)">
+            <summary>
+            Method to get text of the checkbox
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ICheckBoxService`1.IsEnabled(`0)">
+            <summary>
+            Method to get is enabled property of the checkbox
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumCheckBoxService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get button css value
+            </summary>
+            <param name="_driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumCheckBoxService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get button attribute value
+            </summary>
+            <param name="_driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumCheckBoxService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of the button
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumCheckBoxService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the button
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumCheckBoxService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the button
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumCheckBoxService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumCheckBoxService.CheckByValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to check the required check box by passed value
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumCheckBoxService.UnCheckByValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to uncheck the required check box by passed value
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService.WebElement">
+            <summary>
+            Selenium checkbox webelement
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Selenium  checkbox service constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService.Check(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to select the checkbox
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService.Uncheck(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to de-select the checkbox
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService.Text(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get text of the checkbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService.IsEnabled(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is enabled property of the checkbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of checkbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the checkbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the checkbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get checkbox css value
+            </summary>
+            <param name="driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get checkbox attribute value
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService.CheckByValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to check the check box by passed value
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.CheckBoxService.UnCheckByValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to uncheck the check box by passed value
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.CommonService">
+            <summary>
+            Class to have Selenium elements common functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.CommonService.SearchElement(OpenQA.Selenium.IWebDriver,UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Method to search Selenium web element 
+            </summary>
+            <param name="_window"></param>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.DatePickerService">
+            <summary>
+            Selenium DatePickerService to provide date picker functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumDateTimePicker">
+            <summary>
+            DropdownService interface to provide dropdown functionalities for webapplications
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumDateTimePicker.PickDateForClientAccessEnabled(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            To select a date for the datetime control in which IsClienAccessEnabled set to true
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.DatePickerService.WebElement">
+            <summary>
+            Selenium date picker webelement
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.DatePickerService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Selenium date picker service constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.DropdownService">
+            <summary>
+            Selenium DropdownService to provide dropdown functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.DropdownService.WebElement">
+            <summary>
+            Selenium dropdown webelement
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.DropdownService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Selenium dropdown service constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.DropdownService.SelectByIndex(OpenQA.Selenium.IWebDriver,System.Int32)">
+            <summary>
+            method to select dropdown value by index
+            </summary>
+            <param name="driver"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.DropdownService.SelectByText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to select dropdown value by text
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.DropdownService.SelectByValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to select dropdown value by value
+            </summary>
+            <param name="driver"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.DropdownService.getOptions(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get all the options in dropdown
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Selenium.Services.ElementServices.DropdownService.getSelected(OpenQA.Selenium.IWebDriver)" -->
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.DropdownService.getCount(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the number of options in dropdown
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.DropdownService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.DropdownService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.DropdownService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.DropdownService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get list box css value
+            </summary>
+            <param name="driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.DropdownService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get dropdown attribute value
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.DropdownService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.ElementService">
+            <summary>
+            Selenium General ElementService to provide element functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IElementService">
+            <summary>
+            General ElementService interface to provide element functionalities
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.ElementService.WebElement">
+            <summary>
+            Selenium General webelement
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ElementService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Selenium general webelement service constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.HyperLinkService">
+            <summary>
+            Selenium HyperLinkService to provide hyper link functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumHyperlinkService">
+            <summary>
+            HyperlinkService interface to provide link functionalities for web applications
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IHyperLinkService`1">
+            <summary>
+            HyperLinkService interface to provide hyper link functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IHyperLinkService`1.Click(`0)">
+            <summary>
+            Method for link click
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IHyperLinkService`1.Text(`0)">
+            <summary>
+            Method to get text of the link
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IHyperLinkService`1.IsEnabled(`0)">
+            <summary>
+            Method to get is enabled property of the link
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumHyperlinkService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get button attribute value
+            </summary>
+            <param name="_driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumHyperlinkService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of the button
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumHyperlinkService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the button
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumHyperlinkService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the button
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumHyperlinkService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.HyperLinkService.WebElement">
+            <summary>
+            Selenium hyperlink webelement
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.HyperLinkService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Selenium hyperlink service constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.HyperLinkService.Click(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method for link click
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.HyperLinkService.Text(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get text of the link
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.HyperLinkService.IsEnabled(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is enabled property of the link
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.HyperLinkService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of link
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.HyperLinkService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the link
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.HyperLinkService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the link
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.HyperLinkService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get link  css value
+            </summary>
+            <param name="driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.HyperLinkService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get link attribute value
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.HyperLinkService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService" -->
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumListBoxService">
+            <summary>
+            ListBox interface to provide listbox functionalities for web applications
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IListBoxService`1">
+            <summary>
+            ListBox interface to provide listbox functionalities 
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IListBoxService`1.SelectByIndex(`0,System.Int32)">
+            <summary>
+            method to select listbox value by index
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IListBoxService`1.DeSelectByIndex(`0,System.Int32)">
+            <summary>
+            method to deselect listbox value by index
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IListBoxService`1.SelectByText(`0,System.String)">
+            <summary>
+            method to select dropdown value by text
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IListBoxService`1.SelectByValue(`0,System.String)">
+            <summary>
+            method to select listbox value by value
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IListBoxService`1.DeSelectByText(`0,System.String)">
+            <summary>
+            method tode select dropdown value by text
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Unicorn.IServices.IElementServices.IListBoxService`1.DeSelectByValue(`0,System.String)" -->
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IListBoxService`1.DeselectAll(`0)">
+            <summary>
+            method to deselect all 
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IListBoxService`1.getOptions(`0)">
+            <summary>
+            method to get all the options in listbox
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Unicorn.IServices.IElementServices.IListBoxService`1.getCount(`0)" -->
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Unicorn.IServices.IElementServices.IListBoxService`1.getSelectedItemCount(`0)" -->
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Unicorn.IServices.IElementServices.IListBoxService`1.AllowsMultiple(`0)" -->
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumListBoxService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get button attribute value
+            </summary>
+            <param name="_driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumListBoxService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of the button
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumListBoxService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the button
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumListBoxService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the button
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumListBoxService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.WebElement">
+            <summary>
+            Selenium listbox webelement
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Selenium listbox service constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.SelectByIndex(OpenQA.Selenium.IWebDriver,System.Int32)">
+            <summary>
+            method to select listbox value by index
+            </summary>
+            <param name="driver"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.DeSelectByIndex(OpenQA.Selenium.IWebDriver,System.Int32)">
+            <summary>
+            method to deselect listbox value by index
+            </summary>
+            <param name="driver"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.SelectByText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to select listbox value by text
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.DeSelectByText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to deselect listbox value by text
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.SelectByValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to select listbox value by value
+            </summary>
+            <param name="driver"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.DeSelectByValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to deselect listbox value by value
+            </summary>
+            <param name="driver"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.DeselectAll(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to deselect all options
+            </summary>
+            <param name="driver"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.getOptions(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get all the options in listbox
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.getCount(OpenQA.Selenium.IWebDriver)" -->
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.AllowsMultiple(OpenQA.Selenium.IWebDriver)" -->
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.getSelectedItemCount(OpenQA.Selenium.IWebDriver)" -->
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of list box
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the list box
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the list box
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get list box css value
+            </summary>
+            <param name="driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get list box attribute value
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.ListBoxService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService">
+            <summary>
+            Selenium ButtonService to provide button functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumTextBoxService">
+            <summary>
+            TextBoxService interface to provide textbox functionalities for web applications
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumTextBoxService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get textbox css value
+            </summary>
+            <param name="_driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumTextBoxService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get textbox attribute value
+            </summary>
+            <param name="_driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumTextBoxService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of textbox
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumTextBoxService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the textbox
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumTextBoxService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the textbox
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumTextBoxService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.WebElement">
+            <summary>
+            Selenium Button web element
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel,UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Selenium  Button service constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.EnterText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to enter text into Selenium Calculator
+            </summary>
+            <param name="driver">Web Driver Object</param>
+            <param name="text">Set Of Charcters To Be Entered. Eg : 149+89=</param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.EnterPostalText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to enter text into Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.EnterDateText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to enter text into Selenium textboxdate
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.EnterDateExpiryText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to enter text into Selenium textboxdateExpiry
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.ClearText(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to clear Selenium textbox text
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get Selenium textbox css value
+            </summary>
+            <param name="driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get Selenium textbox attribute value
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.Text(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get text of the Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.IsEnabled(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is enabled property of Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.IsVisible(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is visible property of Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.OnscreenCalculatorTextBoxService.EnterFromDropDown(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to enter text into Selenium textboxdateExpiry
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService">
+            <summary>
+            Selenium ButtonService to provide button functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.WebElement">
+            <summary>
+            Selenium Button web element
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel,UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Selenium  Button service constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.EnterText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to enter text into Selenium Virtual Keypad
+            </summary>
+            <param name="driver">Web Driver Object</param>
+            <param name="text">Set of Characters To Be Entered. Eg : 149+89=</param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.EnterPostalText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to enter text into Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.EnterDateText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to enter text into Selenium textboxdate
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.EnterDateExpiryText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to enter text into Selenium textboxdateExpiry
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.ClearText(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to clear Selenium textbox text
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get Selenium textbox css value
+            </summary>
+            <param name="driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get Selenium textbox attribute value
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.Text(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get text of the Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.IsEnabled(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is enabled property of Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.IsVisible(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is visible property of Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxWithVirtualKeyPadService.EnterFromDropDown(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to enter text into Selenium textboxdateExpiry
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.RadioButtonService">
+            <summary>
+            Selenium RadioButtonService to provide radio button functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumRadioButtonService">
+            <summary>
+            RadioButtonService interface to provide radio button functionalities for web applications
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IRadioButtonService`1">
+            <summary>
+            RadioButtonService interface to provide radio button functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IRadioButtonService`1.Click(`0)">
+            <summary>
+            Method for button click
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IRadioButtonService`1.Text(`0)">
+            <summary>
+            Method to get text of the button
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IRadioButtonService`1.IsEnabled(`0)">
+            <summary>
+            Method to get is enabled property of the button
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Unicorn.IServices.IElementServices.IRadioButtonService`1.IsSelected(`0)" -->
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumRadioButtonService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get button css value
+            </summary>
+            <param name="_driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumRadioButtonService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get button attribute value
+            </summary>
+            <param name="_driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumRadioButtonService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of the button
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumRadioButtonService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the button
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumRadioButtonService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the button
+            </summary>
+            <param name="_driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumRadioButtonService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ISeleniumService.ISeleniumRadioButtonService.SelectByValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to select the required radiobutton based on passed value 
+            </summary>
+            <param name="_driver"></param>
+            <returns>void</returns>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.RadioButtonService.WebElement">
+            <summary>
+            Selenium radio button webelement
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.RadioButtonService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Selenium Radio Button service constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.RadioButtonService.Click(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method for Radio Button click
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.RadioButtonService.Text(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get text of the Radio Button
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.RadioButtonService.IsEnabled(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is enabled property of the Radio Button
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.RadioButtonService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Selenium.Services.ElementServices.RadioButtonService.IsSelected(OpenQA.Selenium.IWebDriver)" -->
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.RadioButtonService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of Radio Button
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.RadioButtonService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the Radio Button
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.RadioButtonService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the Radio Button
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.RadioButtonService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get Radio Button  css value
+            </summary>
+            <param name="driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.RadioButtonService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get Radio Button attribute value
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.RadioButtonService.SelectByValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to select Radio Button based on passed value
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService">
+            <summary>
+            Selenium DropdownService to provide dropdown functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService.WebElement">
+            <summary>
+            Selenium dropdown webelement
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Selenium dropdown service constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService.SelectByIndex(OpenQA.Selenium.IWebDriver,System.Int32)">
+            <summary>
+            method to select dropdown value by index
+            </summary>
+            <param name="driver"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService.SelectByText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to select dropdown value by text
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService.SelectByValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to select dropdown value by value
+            </summary>
+            <param name="driver"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService.getOptions(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get all the options in dropdown
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService.getSelected(OpenQA.Selenium.IWebDriver)" -->
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService.getCount(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the number of options in dropdown
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get list box css value
+            </summary>
+            <param name="driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get dropdown attribute value
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItCascadingDropDownService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService">
+            <summary>
+            Selenium DropdownService to provide dropdown functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService.WebElement">
+            <summary>
+            Selenium dropdown webelement
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel,UnicornLibrary.Unicorn.Models.ElementModel,UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Selenium dropdown service constructor
+            </summary>
+            <param name="_arrowelement"></param>
+            <param name="_contentelement"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService.SelectByIndex(OpenQA.Selenium.IWebDriver,System.Int32)">
+            <summary>
+            method to select dropdown value by index
+            </summary>
+            <param name="driver"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService.SelectByText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to select dropdown value by text
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService.SelectByValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            method to select dropdown value by value
+            </summary>
+            <param name="driver"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService.getOptions(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get all the options in dropdown
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService.getSelected(OpenQA.Selenium.IWebDriver)" -->
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService.getCount(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the number of options in dropdown
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the dropdown
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get list box css value
+            </summary>
+            <param name="driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get dropdown attribute value
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.SelectBoxItReadOnlyDropDownService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.ElementServices.TextBoxService">
+            <summary>
+            TextBoxService to provide textbox functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:UnicornLibrary.Selenium.Services.ElementServices.TextBoxService.WebElement">
+            <summary>
+            Selenium textbox webelement
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Selenium textbox service constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxService.EnterText(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to enter text into Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxService.ClearText(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to clear Selenium textbox text
+            </summary>
+            <param name="driver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxService.getWebElement(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            method to get the actual web Element
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxService.GetCssValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get Selenium textbox css value
+            </summary>
+            <param name="driver"></param>
+            <param name="_PropertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxService.GetAttributeValue(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method to get Selenium textbox attribute value
+            </summary>
+            <param name="driver"></param>
+            <param name="attribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxService.Text(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get text of the Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxService.IsEnabled(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is enabled property of Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxService.TagName(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get tag name of Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxService.IsVisible(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get is visible property of Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxService.GetSize(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get size of the Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.ElementServices.TextBoxService.GetLocation(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to get location of the Selenium textbox
+            </summary>
+            <param name="driver"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Selenium.Services.MailService">
+            <summary>
+            Selenium MailService to provice mail management functionalities
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IMailService">
+            <summary>
+            MailService Interface to provice mail management functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IMailService.SendReportToMail">
+            <summary>
+            Mehod to send test execution report on mail
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Selenium.Services.MailService.SendReportToMail">
+            <summary>
+            Selenium Mehod to send test execution report on mail
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Factory.ElementsFactory">
+            <summary>
+            Factory class to get service objects of different elements
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWindowsTextBox(System.String,System.String)">
+            <summary>
+            Returns White Framework Text Box
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWebTextBox(System.String,System.String)">
+            <summary>
+            Returns Selenium Framework Text Box
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWindowsButton(System.String,System.String)">
+            <summary>
+            Returns White Framework Button
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWebButton(System.String,System.String)">
+            <summary>
+            Returns Selenium Framework Button
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWindowsCheckBox(System.String,System.String)">
+            <summary>
+            Returns White Framework CheckBox
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWebCheckBox(System.String,System.String)">
+            <summary>
+            Returns Selenium Framework CheckBox
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetDatePickerService(System.String,System.String)">
+            <summary>
+            Return DatePicker service
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWindowsDropdown(System.String,System.String)">
+            <summary>
+            Returns White Framework Dropdown
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWebDropdown(System.String,System.String)">
+            <summary>
+            Returns Selenium Framework Dropdown
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetElementService(System.String,System.String)">
+            <summary>
+            Returns Elements general service
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetHyperLinkService(System.String,System.String)">
+            <summary>
+            Returns Hyperlink service
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWindowsRadioButton(System.String,System.String)">
+            <summary>
+            Returns White Framework RadioButton
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWebRadioButton(System.String,System.String)">
+            <summary>
+            Returns Selenium Framework RadioButton
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetVirtualKeypadTextBox(System.String,System.String,System.String)">
+             <summary>
+            Returns Virtual Keypad Service
+             </summary>
+             <param name="searchType">Serch Type for a element</param>
+             <param name="searchValue">Parent Search Value</param>
+             <param name="actualValue">Element Search Value</param>
+             <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetCalculatorTextBox(System.String,System.String,System.String)">
+            <summary>
+            Returns Calculator Service
+            </summary>
+            <param name="searchType">Serch Type for a element</param>
+            <param name="searchValue">Parent Search Value</param>
+            <param name="actualValue">Element Search Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWebBoostrapDrumDateTimePicker(System.String,System.String)">
+            <summary>
+            Returns BoostrapDrumDateTimePicker service
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="searchType">Takes selector. Example Id, Class, Xpath etc</param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWebBootStrapDropdown(System.String,System.String)">
+            <summary>
+            Returns BootStrapDropdownService service
+            </summary>
+            <param name="searchType">Takes name of selector. Example Id, Class, Xpath etc</param>
+            <param name="searchValue">Takes selector value</param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWebBootStrapDropdownSearch(System.String,System.String)">
+            <summary>
+            Returns BootStrapDropdownSearchService service
+            </summary>
+            <param name="searchType">Takes name of selector. Example Id, Class, Xpath etc</param>
+            <param name="searchValue">Takes selector value</param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWebBootStrapDropdownSearchCheckbox(System.String,System.String)">
+            <summary>
+            Returns BootStrapDropdownSearchCheckboxService service
+            </summary>
+            <param name="searchType">Takes name of selector. Example Id, Class, Xpath etc</param>
+            <param name="searchValue">Takes selector value</param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWebSelectBoxItCascadingDropDown(System.String,System.String)">
+            <summary>
+            Returns SelectBoxItCascadingDropDownService
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWindowsTab(System.String,System.String)">
+            <summary>
+            Returns Tab service
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWebSelectBoxItReadOnlyDropDown(System.String,System.String)">
+            <summary>
+            Returns Readonly Drop Down of UI Framework
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetAppiumButtonService(System.String,System.String)">
+            <summary>
+            Returns Appium button service
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetAppiumTextboxService(System.String,System.String)">
+            <summary>
+            Returns Appium textbox service
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWebDropdown(System.String,System.String,UnicornLibrary.Unicorn.Utilities.UnicornEnums.WebDropDownControl)">
+            <summary>
+            Returns different types of dropdown based on enum values
+            </summary>
+            <param name="searchType"></param>
+            <param name="searchValue"></param>
+            <param name="dropDownType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.ElementsFactory.GetWebTextBox(System.String,System.String,UnicornLibrary.Unicorn.Utilities.UnicornEnums.WebTextBoxControl)">
+            <summary>
+            Returns all type of textbox based on enum values
+            </summary>
+            <param name="searchType"></param>
+            <param name="parentSearchValue"></param>
+            <param name="searchValue"></param>
+            <param name="textBoxType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Factory.Factory">
+            <summary>
+            Factory class to return different factory classes
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Factory.Factory.UnicornServices">
+            <summary>
+            Returns UnicornServices factory class
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Factory.Factory.ElementServices">
+            <summary>
+            Returns ElementServices factory class
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Services.BugService">
+            <summary>
+            Selenium BugService to provice bug management functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.BugService.CreateBug(System.String,System.String,System.Int64,System.Int64,System.String,System.Byte[],System.Int32)">
+            <summary>
+            Method to create a bug
+            </summary>
+            <param name="projectName"></param>
+            <param name="testCycle"></param>
+            <param name="testScenarioId"></param>
+            <param name="testDataId"></param>
+            <param name="description"></param>
+            <param name="ScreenshotBytes"></param>
+            <param name="bugSequence"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.BugService.ResolveBug(System.String,System.String,System.Int64,System.Int64,System.Int32)">
+            <summary>
+            Method to resolve a bug
+            </summary>
+            <param name="projectName"></param>
+            <param name="testCycle"></param>
+            <param name="testScenarioId"></param>
+            <param name="testDataId"></param>
+            <param name="bugSequence"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.BugService.GetScreenshot">
+            <summary>
+            Method to capture screenshot
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Services.MailService">
+            <summary>
+            Selenium MailService to provice mail management functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.MailService.SendReportToMail">
+            <summary>
+            Selenium Mehod to send test execution report on mail
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Services.TestCaseService">
+            <summary>
+            TestCaseService to provice testcase management functionalities
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.ITestCaseService">
+            <summary>
+            TestCaseService Interface to provice testcase management functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.ITestCaseService.GetTestCases(System.Reflection.Assembly)">
+            <summary>
+            Method to get test cases
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.ITestCaseService.ExecuteTestCase(System.String,System.Int64,System.Int64)">
+            <summary>
+            Method to execute test cases
+            </summary>
+            <param name="testCaseFullName"></param>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.ITestCaseService.GetTestCaseIds(System.Collections.Generic.List{System.String})">
+            <summary>
+            Method to get testcase ids of test scenario
+            </summary>
+            <param name="TestScenario"></param>
+            <param name="getExclusiveExclusiveTestData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.ITestCaseService.InsertTestResult(System.Int64,UnicornLibrary.Unicorn.Utilities.UnicornEnums.TestStatus,System.String)">
+            <summary>
+            Method to insert test result
+            </summary>
+            <param name="testCaseID"></param>
+            <param name="executed"></param>
+            <param name="excep"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.ITestCaseService.AppiumTestInitialize">
+            <summary>
+            Method to hold functionality of test initiation
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.ITestCaseService.TestCleanUp">
+            <summary>
+            Method to hold functionality of test completion
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestCaseService.GetTestCases(System.Reflection.Assembly)">
+            <summary>
+            Method to get test cases
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestCaseService.GetTestCaseIds(System.Collections.Generic.List{System.String})">
+            <summary>
+            Method to get testcase ids of Selenium test scenario
+            </summary>
+            <param name="testScenarios"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestCaseService.GetAllTestCaseIds(System.Collections.Generic.List{System.String})">
+            <summary>
+            Get All Test Case Ids for All Test Scenarios which are Executed attribute is true
+            </summary>
+            <param name="testScenarios"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestCaseService.ExecuteTestCase(System.String,System.Int64,System.Int64)">
+            <summary>
+            Method to execute test cases
+            </summary>
+            <param name="testCaseFullName"></param>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestCaseService.GetAllTestScenarios(System.Reflection.Assembly)">
+            <summary>
+            Method to get all test scenarios
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestCaseService.GetExecutableTestScenarios(System.Reflection.Assembly)">
+            <summary>
+            Get only Test Scenarios which are execute is true
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestCaseService.GetPriorityFilter">
+            <summary>
+            Get filters applied priority
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestCaseService.IsSelectedModule(System.Object[],System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Check if the test scenarios to be executed
+            </summary>
+            <param name="attributes"></param>
+            <param name="modules"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestCaseService.InsertTestResult(System.Int64,UnicornLibrary.Unicorn.Utilities.UnicornEnums.TestStatus,System.String)">
+            <summary>
+            Method to insert test result
+            </summary>
+            <param name="testCaseID"></param>
+            <param name="executed"></param>
+            <param name="excep"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestCaseService.TestCleanUp">
+            <summary>
+            This method will be called on completion
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestCaseService.AppiumTestInitialize">
+            <summary>
+            This method will be called on initialization of Appium testing
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Services.TestDataService">
+            <summary>
+            TestDataService to provice Selenium test data management functionalities
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.ITestDataService">
+            <summary>
+            TestDataService Interface to provice test data management functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.ITestDataService.GetTestData(System.Int64)">
+            <summary>
+            Method to get test data
+            </summary>
+            <param name="testDataID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.ITestDataService.GetFieldValue(System.String)">
+            <summary>
+            Method to get test data field value
+            </summary>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.ITestDataService.GetFieldName(System.String)">
+            <summary>
+            Method to get test data field name
+            </summary>
+            <param name="fieldValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.ITestDataService.GetGlobalFieldValue(System.String)">
+            <summary>
+            Method to get global  test data field value
+            </summary>
+            <param name="globalfieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.ITestDataService.GetGlobalFieldName(System.String)">
+            <summary>
+            Method to get global test data field name
+            </summary>
+            <param name="globalfieldValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestDataService.FillTestData(System.Int64)">
+            <summary>
+            Method to fill test data
+            </summary>
+            <param name="testCaseID"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestDataService.FillGlobalTestData">
+            <summary>
+            Method to fill test data
+            </summary>
+            <param name="testCaseID"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestDataService.GetTestData(System.Int64)">
+            <summary>
+            Method to get test data
+            </summary>
+            <param name="testCaseID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestDataService.GetGlobalTestData">
+            <summary>
+            Method to get global test data
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestDataService.GetFieldValue(System.String)">
+            <summary>
+            Method to get test data field value
+            </summary>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestDataService.GetFieldName(System.String)">
+            <summary>
+            Method to get test data field name
+            </summary>
+            <param name="fieldValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestDataService.GetGlobalFieldValue(System.String)">
+            <summary>
+            Method to get global test data field value
+            </summary>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestDataService.GetGlobalFieldName(System.String)">
+            <summary>
+            Method to get global test data field name
+            </summary>
+            <param name="fieldValue"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Services.TestDataService.testData">
+            <summary>
+            Property to get test data
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Services.TestDataService.globaltestData">
+            <summary>
+            Property to get global test data
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Services.TestScenarioBaseClass">
+            <summary>
+            Selenium test scenario base class to implement test scenario
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestScenarioBaseClass.InitilaizeApplication(System.String,System.String)">
+            <summary>
+            Method to initialize windows application
+            </summary>
+            <param name="ExeSourceFile"></param>
+            <param name="ApplicationName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestScenarioBaseClass.IntializeFirefox">
+            <summary>
+            Method to return Firefox browser driver
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestScenarioBaseClass.CloseApplication(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to Close the White Application
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestScenarioBaseClass.IntializeChrome">
+            <summary>
+            Method to return Chrome browser driver
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestScenarioBaseClass.IntializeIE">
+            <summary>
+            Method to return IE browser driver
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestScenarioBaseClass.CloseBrowser(OpenQA.Selenium.IWebDriver)">
+            <summary>
+            Method to close all browsers used in Selenium test case execution
+            </summary>
+            <param name="browserDriver"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestScenarioBaseClass.Execute(System.Int64,System.Int64,System.String)">
+            <summary>
+            Abstract method to implement Selenium test case execution code
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+            <param name="testCaseName"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestScenarioBaseClass.Validate(System.Int64,System.Int64,System.String)">
+            <summary>
+            Abstract method to implement Selenium test case validation code
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+            <param name="testCaseName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestScenarioBaseClass.ProcessValidate(System.Int64,System.Int64,System.String)">
+            <summary>
+            Method to execute Selenium test case validation code
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+            <param name="testCaseName"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.TestScenarioBaseClass.EndTestCaseExecution(System.Int64,System.Int64,System.String)">
+            <summary>
+            Method to execute code after Selenium test case execution
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+            <param name="testCaseName"></param>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Services.URLClass">
+            <summary>
+            Class for method extension for Selenium web driver
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.URLClass.GoToURL(OpenQA.Selenium.IWebDriver,System.String)">
+            <summary>
+            Method for Selenium browser to navigate to particular URL
+            </summary>
+            <param name="driver"></param>
+            <param name="Url"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.URLClass.GoToURL(OpenQA.Selenium.IWebDriver,System.String,System.Int64)">
+            <summary>
+            Method for Selenium browser to navigate to particular URL and wait for it to complete load
+            </summary>
+            <param name="driver"></param>
+            <param name="Url"></param>
+            <param name="waitSeconds"></param>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Factory.UnicornFactory">
+            <summary>
+            Factory class to get Unicorn service classes objects
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.UnicornFactory.GetBugService">
+            <summary>
+            Returns BugService object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.UnicornFactory.GetMailService">
+            <summary>
+            Returns MailService object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.UnicornFactory.GetTestCaseService">
+            <summary>
+            Returns TestCaseService object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Factory.UnicornFactory.GetTestDataService">
+            <summary>
+            Returns TestDataService object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.ITabService`1">
+            <summary>
+            TabService interface to provide tab functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ITabService`1.getCellValue(`0)">
+            <summary>
+            Method for getting table cell value
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ITabService`1.SelectTabPageIndex(`0,System.Int32)">
+            <summary>
+            Method to click the tab by passing index
+            </summary>
+            <param name="_window"></param>
+             /// <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ITabService`1.SelectTabPageByName(`0,System.String)">
+            <summary>
+            Method to click the tab by passing name 
+            </summary>
+            <param name="_window"></param>
+             /// <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IWhiteServices.IWhiteCheckBoxService">
+            <summary>
+            CheckBoxService interface to provide CheckBox functionalities for Desktop applications
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IWhiteServices.IWhiteDropDownService">
+            <summary>
+            WhiteDropDownService interface to provide DropDown functionalities for Desktop applications
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.IWhiteServices.IWhiteDropDownService.SelectByEditableText(TestStack.White.UIItems.WindowItems.Window,System.String)">
+            <summary>
+            method to enter value inside dropdown service
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IWhiteLabelService">
+            <summary>
+            White label service interface
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.ILabelService`1">
+            <summary>
+            LabelService interface to provide label functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ILabelService`1.EnterText(`0,System.String)">
+            <summary>
+            Method to enter text into label
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ILabelService`1.ClearText(`0)">
+            <summary>
+            Method to clear label text
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ILabelService`1.Text(`0)">
+            <summary>
+            Method to get text of the label
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ILabelService`1.IsEnabled(`0)">
+            <summary>
+            Method to get is enabled property of label
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.IServices.IElementServices.ILabelService`1.IsVisible(`0)">
+            <summary>
+            Method to get is visible property of label
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IWhiteServices.IWhiteRadioButtonService">
+            <summary>
+            WhiteRadioButtonService interface to provide RadioButton functionalities for Desktop applications
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IWhiteServices.IWhiteTabService">
+            <summary>
+            CheckBoxService interface to provide CheckBox functionalities for Desktop applications
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.IServices.IElementServices.IWhiteTextBoxService">
+            <summary>
+            White textbox service interface
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Models.ElementModel">
+            <summary>
+            Model to save a page element
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Models.ElementModel.#ctor(System.String,System.String)">
+            <summary>
+            Page element model constructor
+            </summary>
+            <param name="_elementSearchType"></param>
+            <param name="_elementPath"></param>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.ElementModel.elementSearchType">
+            <summary>
+            Search type of the element
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.ElementModel.elementPath">
+            <summary>
+            Element search path
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Models.Setup">
+            <summary>
+            Static class to set and get project configurations
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Models.Setup.driver">
+            <summary>
+             Appium Driver exposed for test application
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Models.Setup.#cctor">
+            <summary>
+            Project id property
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Models.Setup.LoadConfigurations">
+            <summary>
+            Method to load project properties
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.projectName">
+            <summary>
+            Project name property
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.projectType">
+            <summary>
+            Project type property
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.testCycle">
+            <summary>
+            Test cycle property
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.jurisdiction">
+            <summary>
+            Jurisdiction property
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.testExecutionID">
+            <summary>
+            Test execution id property
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.modulesSpecialExecutionIDs">
+            <summary>
+            Special test execution based on modules configured
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.screenshotpath">
+            <summary>
+            Path where screenshots will be placed
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.appiumInit">
+            <summary>
+            Flat to determine if appium is used
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.windowsInit">
+            <summary>
+            Flat to determine if white is used
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.webDriverInit">
+            <summary>
+            Flat to determine if selenium is used
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.hostName">
+            <summary>
+            Flat to determine if appium is used
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.platformName">
+            <summary>
+            platformName property
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.platformVersion">
+            <summary>
+            platformVersion property
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.deviceName">
+            <summary>
+            deviceName property
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.appPackage">
+            <summary>
+            appPackage property
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.appActivity">
+            <summary>
+            appActivity property
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.appiumurl">
+            <summary>
+            appiumurl property
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.Setup.apppath">
+            <summary>
+            appiumurl property
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Models.TestDataModel">
+            <summary>
+            Model class to store test data
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.TestDataModel.testDataID">
+            <summary>
+            test data id
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.TestDataModel.testCaseID">
+            <summary>
+            test case id
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.TestDataModel.fieldName">
+            <summary>
+            test data field name
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.TestDataModel.fieldValue">
+            <summary>
+            test data field value
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Models.GlobalTestDataModel">
+            <summary>
+            Model class to store Global test data
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.GlobalTestDataModel.globaltestDataID">
+            <summary>
+            test data id
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.GlobalTestDataModel.globalfieldName">
+            <summary>
+            test data field name
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Models.GlobalTestDataModel.globalfieldValue">
+            <summary>
+            test data field value
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.IRepository`1.GetAll">
+            <summary>
+            GEt All 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.IRepository`1.GetById(System.Object)">
+            <summary>
+            Get entity by identifier
+            </summary>
+            <param name="id">Identifier</param>
+            <returns>Entity</returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.IRepository`1.Insert(`0,System.Boolean)">
+            <summary>
+            Insert entity
+            </summary>
+            <param name="entity">Entity</param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.IRepository`1.Insert(System.Collections.Generic.IEnumerable{`0},System.Boolean)">
+            <summary>
+            Insert entities
+            </summary>
+            <param name="entities">Entities</param>        
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.IRepository`1.Update(`0,System.Boolean)">
+            <summary>
+            Update entity
+            </summary>
+            <param name="entity">Entity</param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.IRepository`1.Update(System.Collections.Generic.IEnumerable{`0},System.Boolean)">
+            <summary>
+            Update entities
+            </summary>
+            <param name="entities">Entities</param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.IRepository`1.Delete(`0,System.Boolean)">
+            <summary>
+            Delete entity
+            </summary>
+            <param name="entity">Entity</param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.IRepository`1.Delete(System.Collections.Generic.IEnumerable{`0},System.Boolean)">
+            <summary>
+            Delete entities
+            </summary>
+            <param name="entities">Entities</param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.IRepository`1.SaveChanges">
+            <summary>
+            Save the changes in context
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.IRepository`1.ExecuteStoredProcedure(System.String,System.Object[])">
+            <summary>
+            Execute StoredProcedure
+            </summary>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.IRepository`1.ExecuteDataStoredProcedure``1(System.String,System.Object[])">
+            <summary>
+            Execute StoredProcedure and return data
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Repository.IRepository`1.Table">
+            <summary>
+            Gets a table
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Repository.IRepository`1.TableNoTracking">
+            <summary>
+            Gets a table with no tracking
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.EfRepository`1.#ctor(System.Data.Entity.DbContext)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="context">Object context</param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.EfRepository`1.GetAll">
+            <summary>
+            Get all entities
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.EfRepository`1.GetById(System.Object)">
+            <summary>
+            Get entity by identifier
+            </summary>
+            <param name="id">Identifier</param>
+            <returns>Entity</returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.EfRepository`1.Insert(`0,System.Boolean)">
+            <summary>
+            Insert entity
+            </summary>
+            <param name="entity">Entity</param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.EfRepository`1.Insert(System.Collections.Generic.IEnumerable{`0},System.Boolean)">
+            <summary>
+            Insert entities
+            </summary>
+            <param name="entities">Entities</param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.EfRepository`1.Update(`0,System.Boolean)">
+            <summary>
+            Update entity
+            </summary>
+            <param name="entity">Entity</param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.EfRepository`1.Update(System.Collections.Generic.IEnumerable{`0},System.Boolean)">
+            <summary>
+            Update entities
+            </summary>
+            <param name="entities">Entities</param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.EfRepository`1.Delete(`0,System.Boolean)">
+            <summary>
+            Delete entity
+            </summary>
+            <param name="entity">Entity</param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.EfRepository`1.Delete(System.Collections.Generic.IEnumerable{`0},System.Boolean)">
+            <summary>
+            Delete entities
+            </summary>
+            <param name="entities">Entities</param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.EfRepository`1.SaveChanges">
+            <summary>
+            Save the changes to context
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.EfRepository`1.ExecuteStoredProcedure(System.String,System.Object[])">
+            <summary>
+            Execute StoredProcedure
+            </summary>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.EfRepository`1.ExecuteDataStoredProcedure``1(System.String,System.Object[])">
+            <summary>
+            Execute StoredProcedure and return data
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Repository.EfRepository`1.Dispose">
+            <summary>
+            Dispose context
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Repository.EfRepository`1.Table">
+            <summary>
+            Gets a table
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Repository.EfRepository`1.TableNoTracking">
+            <summary>
+            Gets a table with "no tracking" enabled (EF feature) Use it only when you load record(s) only for read-only operations
+            </summary>
+        </member>
+        <member name="P:UnicornLibrary.Unicorn.Repository.EfRepository`1.Entities">
+            <summary>
+            Entities
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Services.CommonService">
+            <summary>
+            Class to implement common functionalities of unicorn
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.CommonService.GetProjectID(System.String,System.String)">
+            <summary>
+            Method to get db project id of current project
+            </summary>
+            <param name="projectName"></param>
+            <param name="jurisdiction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.CommonService.GetTestExecutionID">
+            <summary>
+            Method to get db test execution id of current execution
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Services.DataFillService">
+            <summary>
+            Class to save project data into database
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.DataFillService.RefreshDBMasterData(System.Collections.Generic.List{System.String},System.Reflection.Assembly)">
+            <summary>
+            Updates complete projects data into database
+            </summary>
+            <param name="testScenarios"></param>
+            <param name="sender"></param>
+        </member>
+        <member name="M:UnicornLibrary.Unicorn.Services.DataFillService.UpdateProjectData">
+            <summary>
+            update projects table in database
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Utilities.UnicornAttributes">
+            <summary>
+            Class to implement unicorn attributes
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Utilities.UnicornAttributes.ExecuteTestCaseAttribute">
+            <summary>
+            Test scenario execution attribute
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Utilities.UnicornAttributes.ModuleAttribute">
+            <summary>
+            test scenario module attribute
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Utilities.UnicornAttributes.TestCasePriorityAttribute">
+            <summary>
+            test scenario priority module
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Utilities.UnicornEnums">
+            <summary>
+            Class to have unicorn enums
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Utilities.UnicornEnums.ExecuteType">
+            <summary>
+            Test scenario execution type
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.ExecuteType.Execute">
+            <summary>
+            Enum to specify test scenario execute
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.ExecuteType.DoNotExecute">
+            <summary>
+            Enum to specify test scenaario do not execute
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Utilities.UnicornEnums.Priority">
+            <summary>
+            Test scenario priority
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.Priority.All">
+            <summary>
+            Enum to specify test scenario All priority
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.Priority.Priority1">
+            <summary>
+            Enum to specify test scenario priority 1
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.Priority.Priority2">
+            <summary>
+            Enum to specify test scenario priority 2
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.Priority.Priority3">
+            <summary>
+            Enum to specify test scenario priority 3
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.Priority.Priority4">
+            <summary>
+            Enum to specify test scenario priority 4
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.Priority.Priority5">
+            <summary>
+            Enum to specify test scenario priority 5
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Utilities.UnicornEnums.TestStatus">
+            <summary>
+            Test Result Enum values
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Utilities.UnicornEnums.WebDropDownControl">
+            <summary>
+            DropDown Types
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.WebDropDownControl.WebDropdown">
+            <summary>
+            Enum to specify Insite Dropdown
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.WebDropDownControl.WebBootStrapDropdown">
+            <summary>
+            Enum to specify Bootstrap Dropdown
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.WebDropDownControl.WebBootStrapDropdownSearch">
+            <summary>
+            Enum to specify Bootstrap DropdownSearch
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.WebDropDownControl.WebBootStrapDropdownSearchCheckbox">
+            <summary>
+            Enum to specify Bootstrap DropdownSearchCheckbox
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.WebDropDownControl.WebSelectBoxItCascadingDropDown">
+            <summary>
+            Enum to specify SelectBoxItCascading DropDown
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.WebDropDownControl.WebSelectBoxItReadOnlyDropDown">
+            <summary>
+             Enum to specify SelectBoxItCascading Readonly DropDown
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.WebDropDownControl.WebSelectBoxItEditableDropDown">
+            <summary>
+            Enum to specify SelectBoxItEditableDropDown DropDown
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.Unicorn.Utilities.UnicornEnums.WebTextBoxControl">
+            <summary>
+            TextBox Types
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.WebTextBoxControl.WebTextBox">
+            <summary>
+            Enum to specify Web Textbox
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.WebTextBoxControl.VirtualKeypadTextBox">
+            <summary>
+            Enum to specify VirtualKeypad Textbox
+            </summary>
+        </member>
+        <member name="F:UnicornLibrary.Unicorn.Utilities.UnicornEnums.WebTextBoxControl.CalculatorTextBox">
+            <summary>
+            Enum to specify Calculator TextBox
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.White.BaseClasses.TestScenarioBaseClass">
+            <summary>
+            White test scenario base class to implement test scenario
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.White.BaseClasses.TestScenarioBaseClass.InitilaizeApplication(System.String,System.String)">
+            <summary>
+            Method to start the White application and return the corresponding window
+            </summary>
+            <param name="ExeSourceFile"></param>
+            <param name="ApplicationName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.White.BaseClasses.TestScenarioBaseClass.CloseApplication(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to Close the White Application
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.White.BaseClasses.TestScenarioBaseClass.Execute(System.Int64,System.Int64,System.String)">
+            <summary>
+            Abstract method to implement White test case execution code
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.BaseClasses.TestScenarioBaseClass.Validate(System.Int64,System.Int64,System.String)">
+            <summary>
+            Abstract method to implement White test case validation code
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.White.BaseClasses.TestScenarioBaseClass.ProcessValidate(System.Int64,System.Int64,System.String)">
+            <summary>
+            Method to execute White test case validation code
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.BaseClasses.TestScenarioBaseClass.EndTestCaseExecution(System.Int64,System.Int64,System.String)">
+            <summary>
+            Method to execute after White test case execution
+            </summary>
+            <param name="testScenarioId"></param>
+            <param name="testCaseId"></param>
+        </member>
+        <member name="T:UnicornLibrary.White.Services.BugService">
+            <summary>
+            BugService to provice White bug management functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.BugService.CreateBug(System.String,System.String,System.Int64,System.Int64,System.String,System.Byte[],System.Int32)">
+            <summary>
+            Method to create a White bug
+            </summary>
+            <param name="projectName"></param>
+            <param name="testCycle"></param>
+            <param name="testScenarioId"></param>
+            <param name="testDataId"></param>
+            <param name="description"></param>
+            <param name="ScreenshotBytes"></param>
+            <param name="bugSequence"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.BugService.ResolveBug(System.String,System.String,System.Int64,System.Int64,System.Int32)">
+            <summary>
+            Method to resolve a White bug
+            </summary>
+            <param name="projectName"></param>
+            <param name="testCycle"></param>
+            <param name="testScenarioId"></param>
+            <param name="testDataId"></param>
+            <param name="bugSequence"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.BugService.GetScreenshot">
+            <summary>
+            Method to capture White screenshot
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.White.Services.ElementServices.ButtonService">
+            <summary>
+            ButtonService to provide White button functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.ButtonService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            White button service Constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.ButtonService.Click(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method for White button click
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.ButtonService.DoubleClick(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method for White button DoubleClick
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.ButtonService.Text(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to get text of the White button
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.ButtonService.IsEnabled(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to get is enabled property of the White button
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.White.Services.ElementServices.CheckBoxService">
+            <summary>
+            CheckBoxService to provide White CheckBox functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.CheckBoxService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            White CheckBox service constructor
+            </summary>       
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.CheckBoxService.Check(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to Check the value into White CheckBox
+            </summary>
+            <param name="_window"></param>       
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.CheckBoxService.IsEnabled(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to Check if CheckBox is Enabled
+            </summary>
+            <param name="_window"></param>  
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.CheckBoxService.Text(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to search Checkbox based on text
+            </summary>
+            <param name="_window"></param> 
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.CheckBoxService.Uncheck(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to uncheck the white CheckBox
+            </summary>
+        </member>
+        <member name="T:UnicornLibrary.White.Services.ElementServices.CommonService">
+            <summary>
+            Class to have White elements common functionalities
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.CommonService.SearchElement(System.Object,UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            Method to search Window element 
+            </summary>
+            <param name="_window"></param>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.White.Services.ElementServices.DropDownService">
+            <summary>
+            DropDownService to provide DropDown functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:UnicornLibrary.White.Services.ElementServices.DropDownService.combobox">
+            <summary>
+            White DropDown element
+            </summary>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.DropDownService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            White DropDown service constructor
+            </summary>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.DropDownService.SelectByText(TestStack.White.UIItems.WindowItems.Window,System.String)">
+            <summary>
+            Method to Select text into White DropDown
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.DropDownService.SelectByIndex(TestStack.White.UIItems.WindowItems.Window,System.Int32)">
+            <summary>
+            Method to Select Value from White DropDown using Index
+            </summary>
+            <param name="_window"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.DropDownService.SelectByEditableText(TestStack.White.UIItems.WindowItems.Window,System.String)">
+            <summary>
+            Method to enter text into White DropDown 
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="T:UnicornLibrary.White.Services.ElementServices.LabelService">
+            <summary>
+            LabelService to provide White label functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.LabelService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            White label service constructor
+            </summary>
+            <param name="_window"></param>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.LabelService.EnterText(TestStack.White.UIItems.WindowItems.Window,System.String)">
+            <summary>
+            Method to enter text into White label
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+            
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.LabelService.ClearText(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to clear White label text
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.LabelService.Text(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to get text of the White label
+            </summary>call
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.LabelService.IsEnabled(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to get is enabled property of White label
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.LabelService.IsVisible(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to get is IsVisible property of White label
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UnicornLibrary.White.Services.ElementServices.RadioButtonService">
+            <summary>
+            RadioButtonService to provide White RadioButton functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.RadioButtonService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            White RadioButton service constructor
+            </summary>       
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.RadioButtonService.Click(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to click into White RadioButton
+            </summary>
+            <param name="_window"></param>     
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.RadioButtonService.Text(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to search text into White RadioButton
+            </summary>
+            <param name="_window"></param>  
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.RadioButtonService.IsEnabled(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to check if enable in White RadioButton
+            </summary>
+            <param name="_window"></param>  
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.RadioButtonService.IsSelected(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to check id radiobutton is selected in White RadioButton
+            </summary>
+            <param name="_window"></param>  
+        </member>
+        <member name="T:UnicornLibrary.White.Services.ElementServices.TabService">
+            <summary>
+            TextBoxService to provide White textbox functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.TabService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            White Tab service constructor
+            </summary>
+            <param name="_window"></param>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.TabService.getCellValue(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to enter text into White textbox
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.TabService.SelectTabPageByName(TestStack.White.UIItems.WindowItems.Window,System.String)">
+            <summary>
+            Method to clear White textbox text
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="T:UnicornLibrary.White.Services.ElementServices.TextBoxService">
+            <summary>
+            TextBoxService to provide White textbox functionalities
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.TextBoxService.#ctor(UnicornLibrary.Unicorn.Models.ElementModel)">
+            <summary>
+            White textbox service constructor
+            </summary>
+            <param name="_window"></param>
+            <param name="_element"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.TextBoxService.EnterText(TestStack.White.UIItems.WindowItems.Window,System.String)">
+            <summary>
+            Method to enter text into White textbox
+            </summary>
+            <param name="_window"></param>
+            <param name="text"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.TextBoxService.ClearText(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to clear White textbox text
+            </summary>
+            <param name="_window"></param>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.TextBoxService.Text(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to get text of the White textbox
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UnicornLibrary.White.Services.ElementServices.TextBoxService.IsEnabled(TestStack.White.UIItems.WindowItems.Window)">
+            <summary>
+            Method to get is enabled property of White textbox
+            </summary>
+            <param name="_window"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
